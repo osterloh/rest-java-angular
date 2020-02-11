@@ -1,0 +1,41 @@
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container col-md-6" style="margin-left: 25%;">
+    <div class="card">
+        <div class="card-header">
+            <h3>Cadastro de Fornecedor</h3>
+            <span class="req"><small>Obrigatório *</small></span>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Nome: </label>
+                        <input required type="text" [(ngModel)]="fornecedor.nome" name="nome"
+                            class="form-control" placeholder="Informe o nome..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="Email"><span class="req">* </span> E-Mail: </label>
+                        <input required type="text" [(ngModel)]="fornecedor.email" name="email" 
+                            class="form-control" placeholder="Informe o e-mail" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Comentario"><span class="req">* </span> Comentário: </label>
+                        <input required type="text" [(ngModel)]="fornecedor.comentario" name="comentario"
+                            class="form-control" placeholder="Comentário"  />
+                    </div>
+                    <div class="form-group">
+                        <label for="cnpj"><span class="req">* </span> CNPJ: </label>
+                        <input required type="text" [(ngModel)]="fornecedor.cnpj" name="cnpj"
+                            class="form-control" placeholder="00.000.000/0000-00" />
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Cadastrar" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
